@@ -1,0 +1,13 @@
+﻿<span>@_temperatureDisplay</span>
+
+@code {
+    private string _temperatureDisplay = string.Empty;
+
+    [Parameter]
+    public int Temperature { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        _temperatureDisplay = $"{Temperature} °C";
+    }
+}
